@@ -4,14 +4,25 @@
     <title>Uncle</title>
     <meta charset="UTF-8" />
     <style>
-      #chat p {margin:0 0 15px 0; padding:20px 25px; border-radius: 18px; width: auto!important;}
+      #chat p {
+        margin: 0 0 15px 0;
+        padding: 20px 25px;
+        border-radius: 18px;
+        max-width: 80%;
+        width: fit-content;
+        word-wrap: break-word;
+      }
+      
       p.user-msg {
         background-color: #f1f1f1;
         text-align: right;
+        margin-left: auto; /* Align to right */
       }
+      
       p.uncle-msg {
         background-color: #e7f4e4;
         text-align: left;
+        margin-right: auto; /* Align to left */
       }
     </style>
   </head>
