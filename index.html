@@ -38,6 +38,7 @@
 
       // Show user's question
       const userMsg = document.createElement('p');
+      userMsg.className = 'user-msg';
       userMsg.innerHTML = `<strong>You:</strong> ${question}`;
       chat.appendChild(userMsg);
 
@@ -65,6 +66,7 @@ try {
 
   // Show Uncle's reply
   const uncleMsg = document.createElement('p');
+  uncleMsg.className = 'uncle-msg';
   uncleMsg.innerHTML = `<strong>Uncle:</strong> ${data.reply}`;
   chat.appendChild(uncleMsg);
   chat.scrollTop = chat.scrollHeight;
