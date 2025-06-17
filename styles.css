@@ -94,17 +94,20 @@ input#question {
     max-width: 90%;
     font-size:14px;
   }
+  #chat_input {
+    padding:10px 0 25px 0;
+  }
   form#chatForm {
     gap: 10px;
-    height: 40px;
+    height: 45px;
   }
   input#question {
     padding: 0 10px;
     font-size:16px;
   }
   #chat_input button {
-    background-color: blue;
-    padding: 0 10px;
+    background-color: red;
+    padding: 0 15px;
     font-size:16px;
   }
 }
