@@ -87,3 +87,35 @@ input#question {
     overflow-y: auto;
     max-width: 450px;
   }
+  #chat p {
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 15px;
+    max-width: 90%;
+    font-size:16px;
+  }
+  form#chatForm {
+    display: flex;
+    gap: 15px;
+    height: 60px;
+    width: 95%;
+    text-align: left;
+    margin: 0 auto;
+  }
+  input#question {
+    flex: 1;
+    padding: 0 20px;
+    font-size:19px;
+    border: 0;
+    border-radius: 2px;
+  }
+  #chat_input button {
+    background-color: green;
+    color: white;
+    border: 0;
+    padding: 0 40px;
+    font-size:19px;
+    border: 0;
+    border-radius: 80px;
+  }
+}
