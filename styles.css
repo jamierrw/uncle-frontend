@@ -13,7 +13,7 @@ body, input, button, p, em, strong {
 }
 #uncle {
   text-align: center;
-  margin:20px auto;
+  margin:15px auto;
 }
 #uncle img#sticker {
   max-width: 180px;
@@ -93,10 +93,10 @@ input#question {
     padding: 12px 17px;
     border-radius: 15px;
     max-width: 80%;
-    font-size:16px;
+    font-size: 16px;
   }
   #chat_input {
-    padding:10px 0 25px 0;
+    padding: 10px 0 20px 0;
   }
   form#chatForm {
     gap: 10px;
@@ -107,8 +107,7 @@ input#question {
     font-size:16px;
   }
   #chat_input button {
-    background-color: blue;
     padding: 0 15px;
-    font-size:16px;
+    font-size: 16px;
   }
 }
