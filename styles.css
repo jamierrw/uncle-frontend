@@ -85,9 +85,9 @@ input#question {
   border: none;
   border-radius: 50%;
   font-family: "Nunito Sans", Arial, sans-serif;
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 600;
-  line-height: 60px;
+  line-height: 45px;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -127,6 +127,5 @@ input#question {
   }
   #chat_input button, #sendBtn {
     width: 45px;
-    height: 45px;
     line-height: 45px;
 }
