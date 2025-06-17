@@ -23,6 +23,17 @@
           "wdth" 100,
           "YTLC" 500;
       }
+      #uncle {
+        text-align: center; 
+        margin:20px auto;
+      }
+      #chat {
+        background-color: white;
+        padding: 0;
+        height: 400px;
+        overflow-y: auto;
+        max-width: 600px;
+        margin: auto;
       }
       #chat p {
         margin-bottom: 15px;
@@ -45,24 +56,55 @@
         background-color: #e7f4e4;
         margin-right: auto; /* Align to left */
       }
+      #chat_input {
+        width: 100%;
+        position:absolute; 
+        bottom:0; 
+        padding:15px 0 50px 0; 
+        background-color: #F1F1F1;
+      }
+      form #chatForm {
+        display: flex;
+        gap: 15px;
+        height: 60px;
+        width: 95%;
+        text-align: left; 
+        margin: 0 auto;
+      }
+      input #question {
+        flex: 1;
+        padding: 0 20px;
+        font-size:19px;
+        border: 0;
+        border-radius: 2px;
+      }
+      #chat_input button {
+        background-color: green;
+        color: white;
+        border: 0;
+        padding: 0 40px;
+        font-size:19px;
+        border: 0;
+        border-radius: 80px;
+      }
     </style>
   </head>
   
   <body>
-  <!-- <h1 style="text-align: center;">Ask Uncle</h1> -->
-  <div style="text-align: center; margin:20px auto;">
+  <!-- <h1>Ask Uncle</h1> -->
+  <div id="uncle">
     <img src="links/Uncle_TEMP1.png" alt="Uncle Steady" style="max-width: 180px;" />
   </div>
 
 
-  <div id="chat" style="background-color: white; padding: 0; height: 400px; overflow-y: auto; max-width: 600px; margin: auto;">
+  <div id="chat">
     <!-- Chat messages will go here -->
   </div>
 
-  <div style="width: 100%; position:absolute; bottom:0; padding:15px 0 50px 0; background-color: #F1F1F1;">
-    <form id="chatForm" style="display: flex; gap: 15px; height: 60px; width:95%; text-align: left; margin:0 auto;">
-      <input type="text" id="question" placeholder="You say only, uncle listen" style="flex: 1; padding: 0 20px; font-size:19px; border: 0; border-radius: 2px;" />
-      <button type="submit" style="background-color: green; color: white; border: 0; padding: 0 40px; font-size:19px; border: 0; border-radius: 80px;">Tell uncle</button>
+  <div id="chat_input">
+    <form id="chatForm">
+      <input type="text" id="question" placeholder="You say only, uncle listen" />
+      <button type="submit">Tell uncle</button>
     </form>
   </div>
 
@@ -112,7 +154,7 @@ try {
   chat.scrollTop = chat.scrollHeight;
 
 } catch (err) {
-  thinkingMsg.innerHTML = `<em>Wah, something go wrong leh. Try later, can?</em>`;
+  thinkingMsg.innerHTML = `<em>Wah, something go wrong leh. Try later can?</em>`;
 }
 
     };
