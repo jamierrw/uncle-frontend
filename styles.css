@@ -127,5 +127,5 @@ input#question {
   }
   #chat_input button, #sendBtn {
     width: 45px;
-    line-height: 45px;
+    height: 45px;
 }
