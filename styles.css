@@ -86,8 +86,8 @@ input#question {
   border-radius: 50%;
   font-family: "Nunito Sans", Arial, sans-serif;
   font-size: 26px;
-  font-weight: 600;
-  line-height: 45px;
+  font-weight: 800;
+  line-height: 20px;
   text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
