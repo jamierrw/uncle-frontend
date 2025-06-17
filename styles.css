@@ -84,13 +84,16 @@ input#question {
   color: white;
   border: none;
   border-radius: 50%;
-  font-family: "Nunito Sans", Arial, sans-serif;
-  font-size: 28px;
-  font-weight: 800;
-  /* line-height: 60px; */
-  text-align: center;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  /* font-family: "Nunito Sans", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 60px;
+  text-align: center; */
+  display: flex; /* For centering the SVG */
+  align-items: center;
+  justify-content: center;
 }
 #chat_input button:hover {
   background-color: darkgreen;
