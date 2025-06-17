@@ -98,6 +98,10 @@ input#question {
 #chat_input button:hover {
   background-color: darkgreen;
 }
+.send-icon {
+  width: 26px;
+  height: 26px;
+}
 
 /* ------ Responsive styles ------ */
 
@@ -131,4 +135,9 @@ input#question {
   #chat_input button, #sendBtn {
     width: 45px;
     height: 45px;
+  }
+  .send-icon {
+    width: 22px;
+    height: 22px;
+  }
 }
