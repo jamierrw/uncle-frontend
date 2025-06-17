@@ -81,7 +81,7 @@ input#question {
 
 @media (max-width: 600px) {
   #uncle img#sticker {
-  max-width: 130px;
+  max-width: 120px;
   }
   #chat {
     overflow-y: auto;
