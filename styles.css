@@ -67,30 +67,16 @@ input#question {
   border: 0;
   border-radius: 2px;
 }
-/* #chat_input button {
-  background-color: green;
-  color: white;
-  border: 0;
-  padding: 0 40px;
-  font-size:19px;
-  border: 0;
-  border-radius: 80px;
-} */
 #chat_input button, #sendBtn {
   width: 60px;
   height: 60px;
   padding: 0;
-  background-color: green;
+  background-color: blue;
   color: white;
   border: none;
   border-radius: 50%;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  /* font-family: "Nunito Sans", Arial, sans-serif;
-  font-size: 28px;
-  font-weight: 800;
-  line-height: 60px;
-  text-align: center; */
   display: flex; /* For centering the SVG */
   align-items: center;
   justify-content: center;
