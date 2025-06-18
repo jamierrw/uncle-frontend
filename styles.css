@@ -82,7 +82,7 @@ input#question {
   justify-content: center;
 }
 #chat_input button:hover {
-  background-color: lightgreen;
+  background-color: #66CC00;
 }
 .send-icon {
   width: 26px;
