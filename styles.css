@@ -6,7 +6,7 @@ body {
 body, input, button, p, em, strong {
   font-family: "Nunito Sans", Arial, sans-serif;
   font-optical-sizing: auto;
-  /* font-weight: <weight>; */
+  font-weight: 800;
   font-variation-settings:
     "wdth" 100,
     "YTLC" 500;
@@ -71,7 +71,7 @@ input#question {
   width: 60px;
   height: 60px;
   padding: 0;
-  background-color: blue;
+  background-color: green;
   color: white;
   border: none;
   border-radius: 50%;
