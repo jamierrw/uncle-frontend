@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <style></style>
   </head>
   
   <body>
-  <!-- <h1>Ask Uncle</h1> -->
+  <!-- <h1>Tell Uncle Steady</h1> -->
   <div id="uncle">
     <img src="links/Uncle_TEMP1.png" alt="Uncle Steady" id="sticker" />
   </div>
@@ -26,8 +25,6 @@
   <div id="chat_input">
     <form id="chatForm">
       <input type="text" id="question" placeholder="You say only, uncle listen" />
-      <!-- <button type="submit">Tell uncle</button> -->
-      <!-- <button type="submit" id="sendBtn">↑</button> -->
       <button type="submit" id="sendBtn" aria-label="Send message">
         <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <line x1="12" y1="19" x2="12" y2="5"/>
@@ -50,7 +47,7 @@
       // Show user's question
       const userMsg = document.createElement('p');
       userMsg.className = 'user-msg';
-      userMsg.innerHTML = `<strong>You:</strong> ${question}`;
+      userMsg.innerHTML = `${question}`;
       chat.appendChild(userMsg);
 
       // Clear input
@@ -78,7 +75,7 @@ try {
   // Show Uncle's reply
   const uncleMsg = document.createElement('p');
   uncleMsg.className = 'uncle-msg';
-  uncleMsg.innerHTML = `<strong>Uncle:</strong> ${data.reply}`;
+  uncleMsg.innerHTML = `${data.reply}`;
   chat.appendChild(uncleMsg);
   chat.scrollTop = chat.scrollHeight;
 
