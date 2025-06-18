@@ -6,7 +6,7 @@ body {
 body, input, button, p, em, strong {
   font-family: "Nunito Sans", Arial, sans-serif;
   font-optical-sizing: auto;
-  font-weight: 800;
+  font-weight: 500;
   font-variation-settings:
     "wdth" 100,
     "YTLC" 500;
