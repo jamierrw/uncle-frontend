@@ -11,6 +11,9 @@ body, input, button, p, em, strong {
     "wdth" 100,
     "YTLC" 500;
 }
+.hide {
+  display: none;
+}
 #uncle {
   text-align: center;
   margin:15px auto;
