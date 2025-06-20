@@ -68,14 +68,14 @@
         });
       
         const data = await response.json();
+
+        // Update Uncle's expression image
+        if (data.expression) {
+          document.getElementById("sticker").src = `links/${data.expression || "uncle_neutral"}.png`;
+        }
       
         // Remove the "Thinking…" message
         thinkingMsg.remove();
-      
-        // Update Uncle's expression image
-        if (data.expression) {
-          document.getElementById("sticker").src = `links/${data.expression}.png`;
-        }
         
         // Show Uncle's reply
         const uncleMsg = document.createElement('p');
