@@ -115,7 +115,9 @@ p#thinking {
   max-width: 600px;
   margin: auto;
   padding: 70px 0 0;
-  font-weight: 400!important;
+}
+#about p {
+  font-weight: 200!important;
 }
 p.intro {
   font-size: 22px;
