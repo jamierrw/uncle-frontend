@@ -80,12 +80,12 @@
           stickerImg.style.opacity = 0;
           setTimeout(() => {
             // Change image source after fade out
-            stickerImg.src = `links/${data.expression || "uncle_neutral"}.png`;
+            stickerImg.src = `links/${data.expression || "uncle_fallback"}.png`;
             // Fade back in
             stickerImg.onload = () => {
               stickerImg.style.opacity = 1;
             };
-          }, 600); // Match CSS transition time
+          }, 200); // Match CSS transition time
         }
       
         // Remove the "Thinking…" message
