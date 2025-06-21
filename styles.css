@@ -173,12 +173,13 @@ p.intro {
   }
   #about {
     max-width: 450px;
-    padding: 70px 20px 0;
+    padding: 80px 20px 0;
   }
   #about h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
   p.intro {
-    font-size: 20px;
+    font-size: 18px;
+    margin-bottom: 15px;
   }
 }
