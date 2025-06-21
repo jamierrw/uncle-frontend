@@ -117,16 +117,18 @@ p#thinking {
   padding: 70px 0 0;
 }
 #about h2 {
-  font-size: 22px;
+  font-size: 26px;
   font-weight: 600;
-  margin: 0px;
+  margin: 0;
+  padding:0;
 }
 #about p {
   font-weight: 300;
 }
 p.intro {
   font-size: 22px;
-  margin-bottom: 15px;
+  margin: 0 0 15px;
+  padding: 0;
 }
 
 
