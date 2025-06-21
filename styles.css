@@ -3,6 +3,10 @@ body {
   margin:0;
   padding:0;
 }
+body#colorbg {
+  background-color: green;
+  color: white;
+}
 body, input, button, p, em, strong {
   font-family: "Nunito Sans", Arial, sans-serif;
   font-optical-sizing: auto;
@@ -93,6 +97,12 @@ input#question {
 }
 p#thinking {
   color:#999;
+}
+#about {
+  text-align: left;
+}
+p.intro {
+  font-size: 22px;
 }
 
 
