@@ -20,7 +20,7 @@ body, input, button, p, em, strong {
 }
 #uncle img#sticker {
   max-width: 180px;
-  transition: opacity 0.03s ease;  /* Expression transition */
+  transition: opacity 0.05s linear;  /* Expression transition */
   opacity: 1;  /* Expression transition */
 }
 #chat {
