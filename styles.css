@@ -102,7 +102,7 @@ p#thinking {
   text-align: left;
   max-width: 600px;
   margin: auto;
-  padding: 50px 0 0; 
+  padding: 70px 0 0; 
 }
 p.intro {
   font-size: 22px;
@@ -149,9 +149,9 @@ p.intro {
   }
   #about {
     max-width: 450px;
-    padding: 50px 20px 0;
+    padding: 70px 20px 0;
   }
   p.intro {
-    font-size: 20px;
+    font-size: 19px;
   }
 }
