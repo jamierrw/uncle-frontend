@@ -100,6 +100,9 @@ p#thinking {
 }
 #about {
   text-align: left;
+  max-width: 600px;
+  margin: auto;
+  padding: 0; 
 }
 p.intro {
   font-size: 22px;
@@ -143,5 +146,9 @@ p.intro {
   .send-icon {
     width: 21px;
     height: 21px;
+  }
+  #about {
+    max-width: 450px;
+    padding: 0 10px;
   }
 }
