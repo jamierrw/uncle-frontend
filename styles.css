@@ -103,6 +103,7 @@ p#thinking {
   max-width: 600px;
   margin: auto;
   padding: 0; 
+  color: red!important;
 }
 p.intro {
   font-size: 22px;
