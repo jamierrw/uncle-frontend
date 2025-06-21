@@ -149,6 +149,9 @@ p.intro {
   }
   #about {
     max-width: 450px;
-    padding: 0 10px;
+    padding: 50px 20px 0;
+  }
+  p.intro {
+    font-size: 20px;
   }
 }
