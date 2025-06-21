@@ -116,6 +116,11 @@ p#thinking {
   margin: auto;
   padding: 70px 0 0;
 }
+#about h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0px;
+}
 #about p {
   font-weight: 300;
 }
