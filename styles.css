@@ -124,6 +124,7 @@ p#thinking {
 }
 #about p {
   font-weight: 300;
+  font-size: 14px;
 }
 p.intro {
   font-size: 22px;
