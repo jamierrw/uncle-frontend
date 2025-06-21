@@ -19,8 +19,8 @@ body, input, button, p, em, strong {
   position: absolute;
   top: 15px;
   left: 15px;
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
 #info-icon svg, #close-icon svg {
