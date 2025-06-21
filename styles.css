@@ -112,7 +112,7 @@ p#thinking {
 }
 #about {
   text-align: left;
-  max-width: 600px;
+  max-width: 800px;
   margin: auto;
   padding: 70px 0 0;
 }
@@ -121,6 +121,7 @@ p#thinking {
 }
 p.intro {
   font-size: 22px;
+  margin-bottom: 15px;
 }
 
 
@@ -168,6 +169,5 @@ p.intro {
   }
   p.intro {
     font-size: 20px;
-    margin-bottom: 15px;
   }
 }
