@@ -85,12 +85,16 @@ input#question {
   justify-content: center;
 }
 #chat_input button:hover {
-  background-color: #66CC00;
+  background-color: #2B8C0f;
 }
 .send-icon {
   width: 26px;
   height: 26px;
 }
+p#thinking {
+  color:#CCC;
+}
+
 
 /* ------ Responsive styles ------ */
 
