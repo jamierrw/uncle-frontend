@@ -17,10 +17,10 @@ body, input, button, p, em, strong {
 }
 #info-icon, #close-icon {
   position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 30px;
-  height: 30px;
+  top: 15px;
+  left: 15px;
+  width: 28px;
+  height: 28px;
   cursor: pointer;
 }
 #info-icon svg, #close-icon svg {
@@ -124,10 +124,6 @@ p.intro {
 /* ------ Responsive styles ------ */
 
 @media (max-width: 600px) {
-  #info-icon, #close-icon {
-    width: 26px;
-    height: 26px;
-  }
   #uncle img#sticker {
   max-width: 125px;
   }
