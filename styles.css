@@ -175,6 +175,9 @@ p.intro {
     max-width: 450px;
     padding: 70px 20px 0;
   }
+  #about h2 {
+    font-size: 20px;
+  }
   p.intro {
     font-size: 20px;
   }
