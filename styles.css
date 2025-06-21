@@ -114,7 +114,8 @@ p#thinking {
   text-align: left;
   max-width: 600px;
   margin: auto;
-  padding: 70px 0 0; 
+  padding: 70px 0 0;
+  font-weight: 400!important;
 }
 p.intro {
   font-size: 22px;
