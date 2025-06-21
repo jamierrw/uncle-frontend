@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Uncle Steady</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+    <style></style>
+  </head>
+  
+  <body>
+  <h1 class="hide">Uncle Steady</h1>
+  <h2 class="hide">Tell uncle</h1>
+  <div id="uncle">
+    <img src="links/uncle_hi.png" alt="Uncle Steady" id="sticker" />
+  </div>
+
+  <div id="chat">
+    <!-- Chat messages will go here -->
+  </div>
+
+  <div id="chat_input">
+    <form id="chatForm">
+      <input type="text" id="question" placeholder="You say only, uncle listen" />
+      <button type="submit" id="sendBtn" aria-label="Send message">
+        <svg class="send-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="19" x2="12" y2="5"/>
+          <polyline points="5 12 12 5 19 12"/>
+        </svg>
+      </button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById('chatForm');
+    const chat = document.getElementById('chat');
+
+    form.onsubmit = async (e) => {
+      e.preventDefault();
+      const input = document.getElementById('question');
+      const question = input.value.trim();
+      if (!question) return;
+
+      // Show user's question
+      const userMsg = document.createElement('p');
+      userMsg.className = 'user-msg';
+      userMsg.innerHTML = `${question}`;
+      chat.appendChild(userMsg);
+
+      // Clear input
+      input.value = '';
+
+      // Show temporary "Thinking…" message
+      const thinkingMsg = document.createElement('p');
+      thinkingMsg.innerHTML = `<em>Thinking…</em>`;
+      thinkingMsg.id = 'thinking';
+      chat.appendChild(thinkingMsg);
+      chat.scrollTop = chat.scrollHeight;
+      
+      try {
+        const response = await fetch("https://uncle-backend.onrender.com/ask", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ question })
+        });
+      
+        const data = await response.json();
+
+        // Update Uncle's expression image
+        if (data.expression) {
+          document.getElementById("sticker").src = `links/${data.expression || "uncle_fallback"}.png`;
+        }
+      
+        // Remove the "Thinking…" message
+        thinkingMsg.remove();
+        
+        // Show Uncle's reply
+        const uncleMsg = document.createElement('p');
+        uncleMsg.className = 'uncle-msg';
+        uncleMsg.innerHTML = `${data.reply}`;
+        chat.appendChild(uncleMsg);
+        chat.scrollTop = chat.scrollHeight;
+      
+      } catch (err) {
+        thinkingMsg.innerHTML = `<em>Something go wrong leh. Try later can?</em>`;
+      }
+
+    };
+  </script>
+</body>
+</html>
