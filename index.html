@@ -70,22 +70,8 @@
         const data = await response.json();
 
         // Update Uncle's expression image
-        
-        // if (data.expression) {
-        //  document.getElementById("sticker").src = `links/${data.expression || "uncle_fallback"}.png`;
-        // }
         if (data.expression) {
-          const stickerImg = document.getElementById("sticker");
-          // Fade out
-          stickerImg.style.opacity = 0;
-          setTimeout(() => {
-            // Change image source after fade out
-            stickerImg.src = `links/${data.expression || "uncle_fallback"}.png`;
-            // Fade back in
-            stickerImg.onload = () => {
-              stickerImg.style.opacity = 1;
-            };
-          }, 10); // Match CSS transition time
+          document.getElementById("sticker").src = `links/${data.expression || "uncle_fallback"}.png`;
         }
       
         // Remove the "Thinking…" message
