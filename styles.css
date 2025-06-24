@@ -36,6 +36,8 @@ body, input, button, p, em, strong {
 }
 #uncle img#sticker {
   max-width: 180px;
+  transition: opacity 0.2s ease;
+  opacity: 1;
 }
 #chat {
   background-color: white;
