@@ -8,7 +8,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-    <style></style>
+    <!-- Preload priority expressions -->
+    <link rel="preload" as="image" href="links/uncle_aiyoh.png">
+    <link rel="preload" as="image" href="links/uncle_approving.png">
+    <link rel="preload" as="image" href="links/uncle_calm.png">
+    <link rel="preload" as="image" href="links/uncle_canlah.png">
+    <link rel="preload" as="image" href="links/uncle_encouraging.png">
+    <link rel="preload" as="image" href="links/uncle_explaining.png">
+    <link rel="preload" as="image" href="links/uncle_fallback.png">
+    <link rel="preload" as="image" href="links/uncle_neutral.png">
+    <link rel="preload" as="image" href="links/uncle_thinking.png">
+    <link rel="preload" as="image" href="links/uncle_wise.png">
   </head>
   
   <body>
@@ -46,6 +56,15 @@
   <script>
     const form = document.getElementById('chatForm');
     const chat = document.getElementById('chat');
+
+    // Preload remaining expressions
+    const otherStickers = [
+      "uncle_angry.png", "uncle_annoyed.png", "uncle_bojio.png", "uncle_conspirator.png", "uncle_curious.png", "uncle_disappointed.png", "uncle_dontplay.png","uncle_embarrassed.png", "uncle_angry.png", "uncle_excited.png", "uncle_happy.png", "uncle_laughing.png", "uncle_proud.png", "uncle_regretful.png", "uncle_relieved.png", "uncle_sad.png", "uncle_serious.png", "uncle_shocked.png", "uncle_siaoah.png", "uncle_sighing.png", "uncle_smug.png", "uncle_steadiest.png", "uncle_steady.png", "uncle_supportive.png", "uncle_surprised.png", "uncle_suspicious.png", "uncle_teasing.png", "uncle_thinkfirst.png", "uncle_unsure.png", "uncle_wait.png", "uncle_walao.png", "uncle_warning.png", "uncle_wedidit.png", "uncle_worried.png"
+    ];
+    otherStickers.forEach(name => {
+      const img = new Image();
+      img.src = `links/${name}`;
+    });
 
     form.onsubmit = async (e) => {
       e.preventDefault();
