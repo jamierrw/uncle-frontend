@@ -98,10 +98,28 @@
         const data = await response.json();
 
         // Update Uncle's expression image
+        // if (data.expression) {
+        //   document.getElementById("sticker").src = `links/${data.expression || "uncle_fallback"}.png`;
+        // }
+
+        // Update Uncle's expression image with fade transition
         if (data.expression) {
-          document.getElementById("sticker").src = `links/${data.expression || "uncle_fallback"}.png`;
+          const sticker = document.getElementById("sticker");
+          const newSrc = `links/${data.expression || "uncle_fallback"}.png`;
+          // Don't switch if it's already showing the right image
+          if (sticker.src.includes(newSrc)) return;
+          // Fade out
+          sticker.style.opacity = 0;
+          // After fade-out, switch the image
+          setTimeout(() => {
+            sticker.src = newSrc;
+            // Fade back in after image is loaded
+            sticker.onload = () => {
+              sticker.style.opacity = 1;
+            };
+          }, 200); // match the CSS fade duration
         }
-      
+
         // Remove the "Thinking…" message
         thinkingMsg.remove();
         
