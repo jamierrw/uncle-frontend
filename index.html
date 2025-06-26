@@ -10,11 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
     <!-- Preload priority expressions -->
     <link rel="preload" as="image" href="links/uncle_aiyoh.png">
-    <link rel="preload" as="image" href="links/uncle_approving.png">
-    <link rel="preload" as="image" href="links/uncle_calm.png">
-    <link rel="preload" as="image" href="links/uncle_canlah.png">
-    <link rel="preload" as="image" href="links/uncle_encouraging.png">
-    <link rel="preload" as="image" href="links/uncle_explaining.png">
     <link rel="preload" as="image" href="links/uncle_fallback.png">
     <link rel="preload" as="image" href="links/uncle_neutral.png">
     <link rel="preload" as="image" href="links/uncle_thinking.png">
@@ -59,7 +54,9 @@
 
     // Preload remaining expressions
     const otherStickers = [
-      "uncle_angry.png", "uncle_annoyed.png", "uncle_bojio.png", "uncle_conspirator.png", "uncle_curious.png", "uncle_disappointed.png", "uncle_dontplay.png","uncle_embarrassed.png", "uncle_angry.png", "uncle_excited.png", "uncle_happy.png", "uncle_laughing.png", "uncle_proud.png", "uncle_regretful.png", "uncle_relieved.png", "uncle_sad.png", "uncle_serious.png", "uncle_shocked.png", "uncle_siaoah.png", "uncle_sighing.png", "uncle_smug.png", "uncle_steadiest.png", "uncle_steady.png", "uncle_supportive.png", "uncle_surprised.png", "uncle_suspicious.png", "uncle_teasing.png", "uncle_thinkfirst.png", "uncle_unsure.png", "uncle_wait.png", "uncle_walao.png", "uncle_warning.png", "uncle_wedidit.png", "uncle_worried.png"
+      "uncle_angry.png", "uncle_annoyed.png", "uncle_bojio.png", "uncle_conspirator.png", "uncle_curious.png", "uncle_disappointed.png", "uncle_dontplay.png","uncle_embarrassed.png", "uncle_angry.png", "uncle_excited.png", "uncle_happy.png", "uncle_laughing.png", "uncle_proud.png", "uncle_regretful.png", "uncle_relieved.png", "uncle_sad.png", "uncle_serious.png", "uncle_shocked.png", "uncle_siaoah.png", "uncle_sighing.png", "uncle_smug.png", "uncle_steadiest.png", "uncle_steady.png", "uncle_supportive.png", "uncle_surprised.png", "uncle_suspicious.png", "uncle_teasing.png", "uncle_thinkfirst.png", "uncle_unsure.png", "uncle_wait.png", "uncle_walao.png", 
+      "uncle_warning.png", "uncle_wedidit.png", "uncle_worried.png",
+      "uncle_approving.png", "uncle_calm.png", "uncle_canlah.png", "uncle_encouraging.png", "uncle_explaining.png"
     ];
     otherStickers.forEach(name => {
       const img = new Image();
@@ -98,27 +95,27 @@
         const data = await response.json();
 
         // Update Uncle's expression image
-        // if (data.expression) {
-        //   document.getElementById("sticker").src = `links/${data.expression || "uncle_fallback"}.png`;
-        // }
+        if (data.expression) {
+          document.getElementById("sticker").src = `links/${data.expression || "uncle_fallback"}.png`;
+        }
 
         // Update Uncle's expression image with fade transition
-        if (data.expression) {
-          const sticker = document.getElementById("sticker");
-          const newSrc = `links/${data.expression || "uncle_fallback"}.png`;
+        //if (data.expression) {
+        //  const sticker = document.getElementById("sticker");
+        //  const newSrc = `links/${data.expression || "uncle_fallback"}.png`;
           // Don't switch if it's already showing the right image
-          if (sticker.src.includes(newSrc)) return;
+        //  if (sticker.src.includes(newSrc)) return;
           // Fade out
-          sticker.style.opacity = 0;
+        //  sticker.style.opacity = 0;
           // After fade-out, switch the image
-          setTimeout(() => {
-            sticker.src = newSrc;
+        //  setTimeout(() => {
+        //    sticker.src = newSrc;
             // Fade back in after image is loaded
-            sticker.onload = () => {
-              sticker.style.opacity = 1;
-            };
-          }, 100); // match the CSS fade duration
-        }
+        //    sticker.onload = () => {
+        //      sticker.style.opacity = 1;
+        //    };
+        //  }, 100); // match the CSS fade duration
+        //}
 
         // Remove the "Thinking…" message
         thinkingMsg.remove();
